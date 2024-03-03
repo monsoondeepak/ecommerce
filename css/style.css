@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,500&family=Poppins:wght@200;400;500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border:none;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container form{
+    width:350px;
+    background-color: rgb(153, 153, 253);
+    padding:1rem;
+    text-align: center;
+}
+
+.container form .box{
+    display: block;
+    width:100%;
+    margin-top:12px;
+    padding:.5rem;
+    border:none;
+    border-radius: 7px;
+}
+
+.container form .btn{
+    width:100%;
+    background-color: aqua;
+    padding:.5rem;
+    margin-top:12px;
+    font-size:18px;
+    position: relative;
+}
+
+.container form .btn:hover::before{
+    position:absolute;
+    content: "";
+    height:10px;
+    background-color: #11152a;
+    z-index: 10;
+    width:0%;
+    top:100%;left:0%;right:0;
+    animation-name:deepak;
+    animation-duration: 1.5s;
+}
+
+@keyframes deepak{
+    0%{
+        left:0%;
+        width:0%;
+    }
+ 
+    50%{
+        left:0%;
+        width:100%;
+    } 
+
+     100%{
+        left:100%;
+        width:0%;
+    }
+
+    /* 100%{
+        left:0%;
+        width:0%;
+    } */ 
+}
